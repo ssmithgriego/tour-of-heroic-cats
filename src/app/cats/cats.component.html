@@ -1,0 +1,10 @@
+<h2>My Cats</h2>
+<ul class="cats">
+  <li *ngFor="let cat of cats">
+    <button type="button" (click)="onSelect(cat)">
+      <span class="badge">{{cat.id}}</span>
+      <span class="name">{{cat.name}}</span>
+    </button>
+  </li>
+</ul>
+<app-cat-detail [cat]="selectedCat"></app-cat-detail>
